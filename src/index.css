@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-body bg-slate-950 text-slate-100 antialiased transition-colors duration-300 ease-out;
+  }
+}
