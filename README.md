@@ -43,7 +43,7 @@ Content such as hero text, highlights, skills, and projects are defined in `src/
 ## 🧩 Customisation
 
 - **Profile photo**: Replace the placeholder by adding an image at `public/images/sooraj-ts.jpg`. Update the path in `aboutContent.image` if required.
-- **Resume download**: Place a PDF at `public/resume.pdf` or change `heroContent.resumeLink`.
+- **Resume download**: Run `npm run generate:resume` to create a placeholder PDF, or replace `public/resume.pdf` with your own file and adjust `heroContent.resumeLink` if the name changes.
 - **Project cards**: Update the `projects` array with real links and, optionally, image paths.
 - **Social links**: Adjust `contactContent.social` for your own URLs.
 
@@ -62,6 +62,7 @@ The application uses class-based dark mode (`darkMode: 'class'` in `tailwind.con
 - `npm run build` – Type-check and create a production build.
 - `npm run preview` – Preview the production build locally.
 - `npm run lint` – Run ESLint checks.
+- `npm run generate:resume` – Generate a sample resume PDF (uses PDFKit, safe to replace with your own).
 
 ## 📦 Deploying to GitHub Pages
 
