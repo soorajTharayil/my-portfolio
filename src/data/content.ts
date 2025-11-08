@@ -16,6 +16,13 @@ import { TbDatabaseCog } from 'react-icons/tb'
 
 export type ThemeMode = 'light' | 'dark'
 
+const withBase = (path: string) => {
+  const base = import.meta.env.BASE_URL ?? '/'
+  const normalisedBase = base.endsWith('/') ? base.slice(0, -1) : base
+  const normalisedPath = path.startsWith('/') ? path : `/${path}`
+  return `${normalisedBase}${normalisedPath}`
+}
+
 export type Skill = {
   name: string
   icon: IconType
@@ -46,9 +53,9 @@ export const heroContent = {
   tagline: 'Building scalable web applications with clean UI and robust backend logic.',
   summary:
     'Full-stack developer with a passion for crafting performant experiences across the stack—blending precise front-end engineering with resilient, API-driven backends.',
-  resumeLink: '/resume.pdf',
+  resumeLink: withBase('/resume.pdf'),
   contactLink: '#contact',
-  image: '/images/sooraj-ts.jpg',
+  image: withBase('/images/sooraj-ts.jpg'),
   imageAlt: 'Sooraj T S smiling while seated in an office space',
 }
 
@@ -61,7 +68,7 @@ export const aboutContent = {
     'Experienced in optimising MySQL databases, modularising legacy codebases, and mentoring junior developers.',
   ],
   imageAlt: 'Portrait of Sooraj T S',
-  image: '/images/sooraj-ts.jpg',
+  image: withBase('/images/sooraj-ts.jpg'),
 }
 
 export const skills: Skill[] = [
